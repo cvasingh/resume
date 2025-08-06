@@ -1,0 +1,193 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1 cm,
+    bottom=1 cm,
+    left=1 cm,
+    right=1 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Shiva Singh Resume},
+    pdfauthor={Shiva Singh},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{tfrupee}
+\usepackage[none]{hyphenat}
+\sloppy
+
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{9}{10}}
+\renewcommand\small{\@setfontsize\small{6}{8}}
+\renewcommand\large{\@setfontsize\large{10}{12}}
+\renewcommand\Large{\@setfontsize\Large{12}{14}}
+\renewcommand\LARGE{\@setfontsize\LARGE{14}{16}}
+\renewcommand\huge{\@setfontsize\huge{16}{18}}
+\renewcommand\Huge{\@setfontsize\Huge{18}{20}}
+\makeatother
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{\begin{itemize}[topsep=0 cm,parsep=0 cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4 cm + 10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{\begin{adjustwidth}{0.2 cm}{0.2 cm}\linespread{1.2}\selectfont}{\end{adjustwidth}}
+\newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
+\newenvironment{header}{\setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.2}}{\par\kern\topsep}
+\newcommand{\aftersectionspace}{\vspace{4pt}} 
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+
+\begin{header}
+    \vspace{-6pt}
+    \textbf{\fontsize{24 pt}{24 pt}\selectfont Shiva Singh }
+    \vspace{-5pt}
+    \normalsize
+    \kern 0.25 cm
+    \mbox{\hrefWithoutArrow{tel:8400754949}{\color{MidnightBlue}{\footnotesize\faPhone*}\hspace*{0.13cm}+91 8400754949}}%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{mailto:shivasingh.200087@gmail.com}{\color{MidnightBlue}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}shivasingh.200087@gmail.com}}%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/cvasingh}{\color{MidnightBlue}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}cvasingh}}%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{https://github.com/cvasingh}{\color{MidnightBlue}{\footnotesize\faGithub}\hspace*{0.13cm}cvasingh}}%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{https://cvasingh.com}{\color{MidnightBlue}{\footnotesize\faGlobe}\hspace*{0.13cm}cvasingh.com}}
+\aftersectionspace
+\end{header}
+
+% === Sections Start ===
+\section{Professional Summary}
+\begin{onecolentry}
+Detail-oriented Software Engineer with 3+ years of experience building scalable, maintainable front-end architectures for fintech and data-driven applications. Proficient in React.js, Next.js, and Flutter, with deep expertise in Redux Toolkit, Redux-Saga, and component-driven design. Skilled in responsive UI/UX, RESTful API optimization, SEO, and secure real-time data via encrypted WebSockets. Experienced in Agile workflows, Cypress-based testing, and modern CI/CD pipelines. Seeking a technically challenging role to deliver impactful, high-quality solutions.
+\end{onecolentry}
+
+\section{Work Experience}
+\begin{twocolentry}{\textit{Aug 2022 – Present}}
+\textbf{Sr. Software Engineer} $|$ \textit{Univest.in (Gurugram, Delhi NCR)}
+\end{twocolentry}
+\begin{onecolentry}
+\begin{highlights}
+\item Built and maintained responsive, high-performance web/mobile applications using React.js, Next.js, TypeScript.
+\item Developed stock insights module with 10+ real-time visualizations, increasing user engagement by 35\%.
+\item Built secure WebSocket infrastructure to consume encrypted live stock prices from exchanges, boosting data accuracy and real-time responsiveness.
+\item Implemented secure payment integrations with encryption and tokenization, ensuring compliance with financial data standards.
+\item Created an end-to-end broker web platform with onboarding, KYC, portfolio tracking, and trade execution workflows.
+\item Executed SEO optimization, API efficiency improvements, and performance tuning, resulting in faster load times.
+\item Collaborated cross-functionally within an Agile/Scrum environment, ensuring timely, quality feature releases.
+\item Awarded 6× Employee of the Month and 3× Employee of the Quarter for strong ownership and problem-solving.
+\end{highlights}
+\end{onecolentry}
+\aftersectionspace
+\begin{twocolentry}{\textit{Mar 2022 – Aug 2022}}
+\textbf{Full Stack Developer Intern} $|$ \textit{HexaHash Tech. Pvt. Ltd. (Remote)}
+\end{twocolentry}
+\begin{onecolentry}
+\begin{highlights}
+\item Designed a Customer Feedback Management System with user authentication, data capture, and visualization using React.js, Node.js, and MySQL.
+\item Integrated RESTful APIs to ensure seamless communication between the front-end and back-end, enabling real-time data syncing and accurate response tracking.
+\item Performed end-to-end testing using Cypress, ensuring functional stability and preventing regressions.
+\item Wrote production-level modular code, reducing bugs and improving maintainability.
+\end{highlights}
+\end{onecolentry}
+
+\aftersectionspace
+\begin{twocolentry}{\textit{Aug 2021 – Mar 2022}}
+\textbf{Front-End Developer Intern} $|$ \textit{Skillark Pvt. Ltd. \& 8.7M-1. (Remote)}
+\end{twocolentry}
+\begin{onecolentry}
+\begin{highlights}
+\item Established modular and reusable UI components using React.js, improving front-end scalability.
+\item Optimized complex app states with Redux Toolkit, improving data flow efficiency.
+\item Engineered a CMS-based dynamic website for a non-profit (8.7M-1) with RESTful API design.
+\end{highlights}
+\end{onecolentry}
+
+\section{Education and Certifications}
+\begin{onecolentry}
+\textbf{B.Tech, Computer Science \& Engineering} — Dr. A. P. J. Abdul Kalam Technical University, Lucknow\\
+\textbf{10th \& 12th (PCM)} — Sun Valley Public School, Varanasi (CBSE Board)
+\end{onecolentry}
+
+\section{Technologies and Languages}
+\begin{onecolentry}
+\textbf{Languages:} JavaScript, TypeScript, Dart, HTML5, CSS3, C, C++, Python
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Technologies \& Frameworks:} React.js, Next.js, Flutter, Node.js, Redux Toolkit, Redux-Saga, RESTful APIs, WebSocket (Encrypted), Cypress, Tailwind CSS, Bootstrap, Express.js
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Databases:} MySQL, MongoDB, Postgresql
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Tools \& Platforms:} Git, GitHub, Bitbucket, Jira, Trello, Slack, npm, Yarn, Webpack, Babel
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Cloud \& Analytics:} Mixpanel, CleverTap, Google Analytics, PostHog, CI/CD pipelines
+\end{onecolentry}
+
+\section{Projects}
+\begin{onecolentry}
+\textbf{Task Management System} — \href{https://jira.cvasingh.com}{}
+Jira-like system with drag-and-drop kanban boards, issue tracking, and role-based workflows.
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Whiteboarding} — \href{https://white-board.cvasingh.com}{}
+Real-time collaborative whiteboard tool with drag-and-drop sticky notes and drawing tools.
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{LMS (Learning Management System)} — \href{https://lms.cvasingh.com}{}
+Modular platform for courses, quizzes, and student progress (React, Node.js, MongoDB).
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Dcluttr} — \href{https://app.dcluttr.ai}{}
+Enhanced marketing performance dashboard aggregating reports from Meta, Google, LinkedIn; complex analytics.
+\end{onecolentry}
+
+\section{Achievements \& Other}
+\begin{onecolentry}
+Awarded 6× Employee of the Month and 3× Employee of the Quarter at Univest.\\
+Gold Badge in Python and Silver Badge in MySQL on HackerRank.\\
+Successfully delivered multiple end-to-end production applications recognized for clean architecture and business impact.\\
+Web Development Mentor at Google Developer Student Clubs (GDSC), BBDNITM (Jun 2022 – May 2022).
+\end{onecolentry}
+
+\end{document}
